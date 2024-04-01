@@ -1,0 +1,31 @@
+﻿@page
+@model BulkyWebRazor_Temp.Pages.Categories.CreateModel
+
+<form method="post">
+    <div>
+        <div>
+            <h2>Create Category</h2>
+            <hr />
+        </div>
+        <div>
+            <label asp-for="Category.Name"></label>
+            <input asp-for="Category.Name" />
+            <span asp-validation-for="Category.Name"></span>
+        </div>
+        <div>
+            <label asp-for="Category.DisplayOrder"></label>
+            <input asp-for="Category.DisplayOrder" />
+            <span asp-validation-for="Category.DisplayOrder"></span>
+        </div>
+
+        <div>
+            <div>
+                <button type="submit">Create</button>
+            </div>
+            <div>
+                <a asp-page="/Categories/Index">
+                    Back to List</a>
+            </div>
+        </div>
+    </div>
+</form>
