@@ -1,4 +1,8 @@
-﻿<!DOCTYPE html>
+﻿@using Bulky.Utility
+@using Microsoft.AspNetCore.Http
+@inject IHttpContextAccessor HttpContextAccessor
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -33,6 +37,10 @@
     </header>
     <div class="container">
         <main role="main" class="pb-3">
+            @if (HttpContextAccessor.HttpContext.Session.GetString(SD.SessionCart) != null)
+            {
+                <h1>@HttpContextAccessor.HttpContext.Session.GetString(SD.SessionCart)</h1>
+            }
             @RenderBody()
         </main>
     </div>

@@ -1,4 +1,5 @@
 using Bulky.Models;
+using Bulky.Utility;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -20,6 +21,7 @@ namespace BulkyWeb.Controllers
 
         public IActionResult Privacy()
         {
+            HttpContext.Session.SetString(SD.SessionCart, "Test session value!");
             return View();
         }
 
