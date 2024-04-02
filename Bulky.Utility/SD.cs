@@ -10,4 +10,9 @@ namespace Bulky.Utility
     {
         public const string SessionCart = "SessionShoppingCart";
     }
+    public enum Roles
+    {
+        Admin,
+        Customer
+    }
 }
